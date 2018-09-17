@@ -1,0 +1,28 @@
+{
+    "name": "sxy/webhooks",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "sxy",
+            "email": "474037140@163.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Sxy\\Webhooks\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Sxy\\Webhooks\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sxy\\Webhooks\\AdminServiceProvider"
+            ]
+        }
+    }
+}
