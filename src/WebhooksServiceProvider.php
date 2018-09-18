@@ -11,7 +11,7 @@ class WebhooksServiceProvider extends ServiceProvider
         $this->loadRoutesFrom(__DIR__ . '/web.php');
 
         $this->publishes([
-            __DIR__.'web_hooks.php' => config_path('web_hooks.php'),
+            __DIR__.'/web_hooks.php' => config_path('web_hooks.php'),
         ]);
     }
 
