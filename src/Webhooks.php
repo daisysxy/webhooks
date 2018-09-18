@@ -2,9 +2,10 @@
 
 namespace Sxy\Webhooks;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class Webhooks
+class Webhooks extends Controller
 {
     public function printRunning()
     {
@@ -33,7 +34,7 @@ class Webhooks
 
     private function verify_webhook($data, $hmac_header)
     {
-        $calculated_hmac = hash_hmac('sha256', $data, config('code.gogs_key'), false);
+        $calculated_hmac = hash_hmac('sha256', $data, config('web_hooks.gogs_key', env('webhooks_gogs_key')), false);
         return ($hmac_header == $calculated_hmac);
     }
 }
