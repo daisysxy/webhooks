@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/webhooks/handle', function () {
-    app('webhooks')->handle();
+use Illuminate\Http\Request;
+
+Route::get('/webhooks/handle', function (Request $request) {
+    app('webhooks')->handle($request);
 });

@@ -3,7 +3,6 @@
 namespace Sxy\Webhooks;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 
 class Webhooks extends Controller
 {
@@ -12,7 +11,7 @@ class Webhooks extends Controller
         echo 'running';
     }
 
-    public function handle(Request $request)
+    public function handle($request)
     {
         dd(1);
         $hmac_header = $request->header('X-Gogs-Signature');
