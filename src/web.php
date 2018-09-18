@@ -13,6 +13,10 @@
 
 use Illuminate\Http\Request;
 
-Route::get('/webhooks/handle', function (Request $request) {
+Route::any('/webhooks/handle', function (Request $request) {
     app('webhooks')->handle($request);
+});
+
+Route::any('/webhooks/running', function () {
+    app('webhooks')->printRunning();
 });

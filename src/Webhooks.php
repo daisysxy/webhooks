@@ -13,7 +13,6 @@ class Webhooks extends Controller
 
     public function handle($request)
     {
-        dd(1);
         $hmac_header = $request->header('X-Gogs-Signature');
         $data = $request->getContent();
 
