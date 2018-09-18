@@ -4,7 +4,7 @@ namespace Sxy\Webhooks;
 
 use Illuminate\Support\ServiceProvider;
 
-class AdminServiceProvider extends ServiceProvider
+class WebhooksServiceProvider extends ServiceProvider
 {
     public function boot()
     {

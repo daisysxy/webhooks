@@ -21,7 +21,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Sxy\\Webhooks\\AdminServiceProvider"
+                "Sxy\\Webhooks\\WebhooksServiceProvider"
             ]
         }
     }
